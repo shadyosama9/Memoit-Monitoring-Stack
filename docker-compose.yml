@@ -4,8 +4,12 @@ services:
     build: .
     container_name: memoit
     command: bash -c "rm -f tmp/pids/server.pid && rails db:create db:migrate && rails server -b 0.0.0.0"
-    ports:
-      - 80:3000
+
+    ## Ports will be handled via nginx . Uncomment this when running locally
+    
+    # ports:
+    #   - 80:3000
+
     depends_on:
       - memoit-app-db
 
