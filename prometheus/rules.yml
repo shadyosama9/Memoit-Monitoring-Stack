@@ -1,0 +1,96 @@
+groups:
+- name: rules template
+  rules:
+  - alert: PrometheusTargetMissing
+    expr: up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: Prometheus target missing 
+      description: "A Prometheus target has disappeared. An exporter might be crashed"
+
+
+  - alert: PrometheusConfigurationReloadFailure
+    expr: prometheus_config_last_reload_successful != 1
+    for: 0m
+    labels:
+      severity: warning
+    annotations:
+      summary: Prometheus configuration reload failure 
+      description: "Prometheus configuration reload error"
+
+
+  - alert: PrometheusTooManyRestarts
+    expr: changes(process_start_time_seconds{job=~"prometheus|pushgateway|alertmanager"}[10m]) > 2
+    for: 0m
+    labels:
+      severity: warning
+    annotations:
+      summary: Prometheus too many restarts 
+      description: "Prometheus has restarted more than twice in the last 15 minutes. It might be crashlooping."
+
+  
+
+
+  - alert: HighCPUUsage
+    expr: avg(rate(node_cpu_seconds_total{mode="user"}[5m])) by (instance) > 0.8
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage detected on {{ $labels.instance }}"
+      description: "CPU usage is above 80% for the last 5 minutes."
+
+
+
+  - alert: HighMemoryUsage
+    expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes > 0.9
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High memory usage on {{ $labels.instance }}"
+      description: "Memory usage is above 90%."
+
+
+
+  - alert: HighDiskUsage
+    expr: (node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) / node_filesystem_size_bytes{mountpoint="/"} > 0.85
+    for: 10m
+    labels:
+      severity: critical
+    annotations:
+      summary: "High disk usage on {{ $labels.instance }}"
+      description: "Disk usage on root partition is above 85%."
+
+
+
+  - alert: HighDiskIO
+    expr: rate(node_disk_io_time_seconds_total[5m]) > 0.8
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Disk I/O on {{ $labels.instance }}"
+      description: "Disk I/O time is above 80%."
+
+
+  - alert: HighNetworkTraffic
+    expr: rate(node_network_receive_bytes_total[5m]) > 100000000 or rate(node_network_transmit_bytes_total[5m]) > 100000000
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High network traffic on {{ $labels.instance }}"
+      description: "Network traffic is above 100MB/s."
+
+
+
+  - alert: WebAppIsDown
+    expr: probe_success == 0
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "The web application is down"
