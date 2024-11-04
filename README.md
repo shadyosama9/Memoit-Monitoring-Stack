@@ -123,4 +123,4 @@ To set up NGINX as the proxy server for the application, follow these instructio
 
     ```bash
     sudo systemctl restart nginx
-```
+    ```
