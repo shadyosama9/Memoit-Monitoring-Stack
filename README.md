@@ -185,6 +185,8 @@ Prometheus will now start as a background service and will automatically launch 
 
 **Note:** All the agents can be run as a systemd service like prometheus
 
+<br>
+
 1. **Node Exporter**
 
 - Install Node Exporter
@@ -196,7 +198,7 @@ Prometheus will now start as a background service and will automatically launch 
   After installing Node Exporter, update the `prometheus.yml` file to add the web application server endpoint for monitoring.
 
 
-2. Black Box Exporter
+2. **Black Box Exporter**
 
     To monitor the application health and availability Black Box Exporter can be used
 
