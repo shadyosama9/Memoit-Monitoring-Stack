@@ -127,6 +127,8 @@ To set up NGINX as the proxy server for the application, follow these instructio
 
 ## <a name="prometheus">📈 Prometehus</a>
 
+**Note:** All the `.yml` configuration files for Prometheus are located in the Prometheus directory.
+
 # Monitoring with Prometheus
 
 To set up Prometheus for monitoring and configure it to run as a background service, follow these instructions.
