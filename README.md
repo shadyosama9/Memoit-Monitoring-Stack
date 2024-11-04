@@ -279,3 +279,21 @@ To create insightful dashboards for monitoring your services, you can integrate 
    
 5. **Create Dashboards**
    - Choose from a variety of available dashboards in Grafana to monitor your services effectively.
+
+
+<div align="center">
+  <br />
+
+  <table>
+    <tr>
+      <td>
+        <img src="https://memoit-images.s3.us-east-1.amazonaws.com/prom-blackbox.webp" alt="Prometheus Black Box" width="300">
+      </td>
+      <td>
+        <img src="https://memoit-images.s3.us-east-1.amazonaws.com/prom-node-exporter.webp" alt="Prometheus Node Exporter" width="300">
+      </td>
+    </tr>
+  </table>
+
+  <h3 align="center">Monitoring Heroes</h3>
+</div>
