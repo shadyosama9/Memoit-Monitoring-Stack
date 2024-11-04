@@ -124,3 +124,53 @@ To set up NGINX as the proxy server for the application, follow these instructio
     ```bash
     sudo systemctl restart nginx
     ```
+
+## <a name="prometheus">📈 Prometehus</a>
+
+# Monitoring with Prometheus
+
+To set up Prometheus for monitoring and configure it to run as a background service, follow these instructions.
+
+## Install Prometheus
+
+1. **Download and Install Prometheus**  
+   [Download Prometheus](https://prometheus.io/download/) and follow the instructions for installation.
+
+2. **Locate the Configuration File**  
+   After installation, you will find a `prometheus.yml` file, which contains the default settings for Prometheus.
+
+## Running Prometheus as a Systemd Service
+
+To run Prometheus in the background, create a systemd service for it by following these steps:
+
+1. **Create the Service File**  
+   Create a new file named `prometheus.service` in the `/etc/systemd/system` directory:
+
+2. **Add the following configuration to the `prometheus.service` file.**
+
+  ```ini
+  [Unit]
+  Description=Prometheus Server
+  Documentation=https://prometheus.io/docs/introduction/overview/
+  After=network-online.target
+
+  [Service]
+  User=root
+  Restart=on-failure
+  ExecStart=<your prometheus installation directory>/prometheus --config.file=<your prometheus installation directory>/prometheus.yml
+
+  [Install]
+  WantedBy=multi-user.target
+  ```
+
+- Replace `<your prometheus installation directory>` with the actual path where Prometheus is installed.
+
+3. **Reload Systemd and Start the Service**
+
+After creating the service file, run the following commands to reload systemd and start Prometheus:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start prometheus.service
+sudo systemctl enable prometheus.service
+```
