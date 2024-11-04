@@ -218,29 +218,29 @@ Prometheus will now start as a background service and will automatically launch 
 
     Sending alerts is crucial for quick troubleshooting. The Alert Manager is the agent used to handle this.
 
-    ## Steps to Configure Alert Manager
+## Steps to Configure Alert Manager
 
-    1. **Create Alert Rules**
-      - Navigate to the Prometheus installation directory.
-      - Create a file named `rules.yml`.
+1. **Create Alert Rules**
+   - Navigate to the Prometheus installation directory.
+   - Create a file named `rules.yml`.
 
-    2. **Define Alert Rules**
-      - Locate the configuration for alert rules in the directory:
-        ```
-        prometheus/rules.yml
-        ```
-      - Edit this file to define your alerting rules.
+2. **Define Alert Rules**
+   - Locate the configuration for alert rules in the directory:
+     ```
+     prometheus/rules.yml
+     ```
+   - Edit this file to define your alerting rules.
 
-    3. **Install Alert Manager**
-      - Download and install [Alert Manager](https://prometheus.io/download/)
+3. **Install Alert Manager**
+   - Download and install [Alert Manager](https://prometheus.io/download/)
 
 
-    4. **Configure Alert Manager**
-      - Find the Alert Manager configuration file in the directory:
-        ```
-        prometheus/alertmanager.yml
-        ```
-      - Open this file and replace the email configurations with your specific values.
+4. **Configure Alert Manager**
+   - Find the Alert Manager configuration file in the directory:
+     ```
+     prometheus/alertmanager.yml
+     ```
+   - Open this file and replace the email configurations with your specific values.
 
-    ## Receiving Alerts
-    Once an alerting rule is triggered, you will receive a notification in your Gmail.
+## Receiving Alerts
+Once an alerting rule is triggered, you will receive a notification in your Gmail.
