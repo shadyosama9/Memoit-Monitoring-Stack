@@ -174,3 +174,5 @@ To run Prometheus in the background, create a systemd service for it by followin
     sudo systemctl start prometheus.service
     sudo systemctl enable prometheus.service
     ```
+
+You can now access Prometheus at `<Your server IP>:9090`.
