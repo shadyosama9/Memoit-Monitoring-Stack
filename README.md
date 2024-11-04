@@ -94,33 +94,33 @@ To set up NGINX as the proxy server for the application, follow these instructio
    ```
 2. **Configure NGINX Default Site**
 
-To change NGINX default site, replace the content in `/etc/nginx/sites-available/default` with the following configuration:
+    To change NGINX default site, replace the content in `/etc/nginx/sites-available/default` with the following configuration:
 
-```nginx
-server {
-    listen 80 default_server;
-    return 444;
-}
-
-server {
-    listen 80;
-    server_name <Enter your server name>;
-
-    location / {
-        proxy_pass http://<memoit app docker container IP>:3000;
+    ```nginx
+    server {
+        listen 80 default_server;
+        return 444;
     }
-}
-```
-- The first `server` block listens on port 80 and immediately drops unwanted connections.
 
-- The second `server` block listens on port 80 and proxies requests to your application:
-  - Replace `<Enter your server name>` with the domain or IP address of your server.
-  - Replace `<memoit app docker container IP>` with the IP address of the Docker container running the application on port 3000.
+    server {
+        listen 80;
+        server_name <Enter your server name>;
+
+        location / {
+            proxy_pass http://<memoit app docker container IP>:3000;
+        }
+    }
+    ```
+    - The first `server` block listens on port 80 and immediately drops unwanted connections.
+
+    - The second `server` block listens on port 80 and proxies requests to your application:
+      - Replace `<Enter your server name>` with the domain or IP address of your server.
+      - Replace `<memoit app docker container IP>` with the IP address of the Docker container running the application on port 3000.
 
 3. **Restart NGINX**
 
-After configuring, restart NGINX to apply the changes:
+    After configuring, restart NGINX to apply the changes:
 
-```bash
-sudo systemctl restart nginx
+    ```bash
+    sudo systemctl restart nginx
 ```
