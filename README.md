@@ -187,8 +187,8 @@ Prometheus will now start as a background service and will automatically launch 
 
 - Install Node Exporter
 
-Download and install [Node Exporter](https://prometheus.io/download/) on the web application server to monitor system health.
+  Download and install [Node Exporter](https://prometheus.io/download/) on the web application server to monitor system health.
 
 - Configure Prometheus to Monitor Node Exporter
 
-After installing Node Exporter, update the `prometheus.yml` file to add the web application server endpoint for monitoring.
+  After installing Node Exporter, update the `prometheus.yml` file to add the web application server endpoint for monitoring.
