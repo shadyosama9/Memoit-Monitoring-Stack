@@ -197,6 +197,7 @@ Prometheus will now start as a background service and will automatically launch 
 
   After installing Node Exporter, update the `prometheus.yml` file to add the web application server endpoint for monitoring.
 
+<br>
 
 2. **Black Box Exporter**
 
