@@ -58,8 +58,7 @@ To set up and run the application using Docker and Docker Compose, follow these 
    REACT_APP_API_URL=
    MEMOIT_DATABASE_PASSWORD="admin"
    MEMOIT_DATABASE_USER="postgres"
-   MEMOIT_DATABASE_HOST="memoit-app-db"
-   
+   MEMOIT_DATABASE_HOST="memoit-app-db"  
 - **Set `REACT_APP_API_URL`** with the appropriate API endpoint.
 - The following variables are pre-configured for database connection:
   - `MEMOIT_DATABASE_PASSWORD`
