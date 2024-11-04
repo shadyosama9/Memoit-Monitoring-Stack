@@ -19,7 +19,7 @@
 
 <br>
 
-## <a name="overview">📊 Overview</a>
+## <a name="overview">🤖 Overview</a>
 
 This project sets up a comprehensive monitoring stack for the [Memoit web application](https://github.com/jasonqiu212/memoit), originally created by [Jason Qiu](https://github.com/jasonqiu212). Using Prometheus, Grafana, and Docker, the stack monitors the application’s health, performance, and availability. It includes Node Exporter and Blackbox Exporter for system and endpoint metrics, and Alertmanager for sending notifications via Gmail. The entire setup is containerized with Docker Compose, making it easy to deploy and manage.
 
@@ -244,3 +244,33 @@ Prometheus will now start as a background service and will automatically launch 
 
 ## Receiving Alerts
 Once an alerting rule is triggered, you will receive a notification in your Gmail.
+
+
+## <a name="grafana">📊 Grafana</a>
+
+
+To create insightful dashboards for monitoring your services, you can integrate **Grafana** with **Prometheus**. Follow the steps below to set up and connect Grafana to Prometheus.
+
+## Steps to Install and Configure Grafana
+
+1. **Install Grafana**
+   - Download Grafana from the official website: [Grafana Downloads](https://grafana.com/grafana/download).
+
+2. **Start Grafana Service**
+   - Enable and start the Grafana service:
+     ```bash
+     sudo systemctl start grafana
+     sudo systemctl enable grafana
+     ```
+
+3. **Access Grafana**
+   - Open Grafana in your browser by navigating to `<your-server-ip>:3000`.
+
+4. **Add Prometheus as a Data Source**
+   - Once in Grafana, follow these steps to connect Prometheus:
+     - Go to **Configuration** > **Data Sources**.
+     - Select **Prometheus** as the data source type.
+     - Enter the details to connect to your Prometheus server.
+   
+5. **Create Dashboards**
+   - Choose from a variety of available dashboards in Grafana to monitor your services effectively.
