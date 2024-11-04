@@ -232,7 +232,8 @@ Sending alerts is crucial for quick troubleshooting. The Alert Manager is the ag
    - Edit this file to define your alerting rules.
 
 3. **Install Alert Manager**
-   - Follow the instructions for installing Alert Manager based on your environment.
+   -Download and install [Alert Manager](https://prometheus.io/download/)
+
 
 4. **Configure Alert Manager**
    - Find the Alert Manager configuration file in the directory:
