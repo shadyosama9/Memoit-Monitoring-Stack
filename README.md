@@ -178,3 +178,17 @@ To run Prometheus in the background, create a systemd service for it by followin
     ```
 
 You can now access Prometheus at `<Your server IP>:9090`.
+
+Prometheus will now start as a background service and will automatically launch on system startup.
+
+## Prometheus Agents
+
+1. **Node Exporter**
+
+- Install Node Exporter
+
+Download and install [Node Exporter](https://prometheus.io/download/) on the web application server to monitor system health.
+
+- Configure Prometheus to Monitor Node Exporter
+
+After installing Node Exporter, update the `prometheus.yml` file to add the web application server endpoint for monitoring.
