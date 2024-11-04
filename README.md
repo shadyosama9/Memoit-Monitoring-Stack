@@ -73,6 +73,6 @@ To set up and run the application using Docker and Docker Compose, follow these 
 
     To build and run the application, execute the following command:
 
-```bash
-docker compose up --build
+    ```bash
+    docker compose up --build
 
