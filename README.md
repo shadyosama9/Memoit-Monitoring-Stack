@@ -67,11 +67,11 @@ To set up and run the application using Docker and Docker Compose, follow these 
 
 2. **Docker Compose Configuratio**
 
-If you are **not** using a proxy or reverse proxy server, uncomment the `ports` section in the `docker-compose.yml` file to expose ports directly.
+  If you are **not** using a proxy or reverse proxy server, uncomment the `ports` section in the `docker-compose.yml` file to expose ports directly.
 
 3. **Build and Run the Containers**
 
-To build and run the application, execute the following command:
+  To build and run the application, execute the following command:
 
 ```bash
 docker compose up --build
