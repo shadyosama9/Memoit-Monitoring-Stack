@@ -216,7 +216,7 @@ Prometheus will now start as a background service and will automatically launch 
 
 3. **Alert Manager**
 
-Sending alerts is crucial for quick troubleshooting. The Alert Manager is the agent used to handle this.
+    Sending alerts is crucial for quick troubleshooting. The Alert Manager is the agent used to handle this.
 
 ## Steps to Configure Alert Manager
 
@@ -232,7 +232,7 @@ Sending alerts is crucial for quick troubleshooting. The Alert Manager is the ag
    - Edit this file to define your alerting rules.
 
 3. **Install Alert Manager**
-   -Download and install [Alert Manager](https://prometheus.io/download/)
+   - Download and install [Alert Manager](https://prometheus.io/download/)
 
 
 4. **Configure Alert Manager**
