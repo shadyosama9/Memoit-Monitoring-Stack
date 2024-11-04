@@ -40,3 +40,40 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
 - Prometheus
 - Grafana
 
+
+## <a name="docker">🐳 Docker</a>
+
+To set up and run the application using Docker and Docker Compose, follow these instructions.
+
+## Prerequisites
+
+- [Install Docker](https://docs.docker.com/engine/install/): Follow the official Docker documentation to install Docker on your system.
+
+## Steps to Run the Application
+
+1. **Create the `.env` file**  
+   Create a file named `.env` in the root directory of your project, and add the following environment variables:
+
+   ```plaintext
+   REACT_APP_API_URL=
+   MEMOIT_DATABASE_PASSWORD="admin"
+   MEMOIT_DATABASE_USER="postgres"
+   MEMOIT_DATABASE_HOST="memoit-app-db"
+   
+- **Set `REACT_APP_API_URL`** with the appropriate API endpoint.
+- The following variables are pre-configured for database connection:
+  - `MEMOIT_DATABASE_PASSWORD`
+  - `MEMOIT_DATABASE_USER`
+  - `MEMOIT_DATABASE_HOST`
+
+2. **Docker Compose Configuratio**
+
+If you are **not** using a proxy or reverse proxy server, uncomment the `ports` section in the `docker-compose.yml` file to expose ports directly.
+
+3. **Build and Run the Containers**
+
+To build and run the application, execute the following command:
+
+```bash
+docker compose up --build
+
