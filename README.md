@@ -75,4 +75,5 @@ To set up and run the application using Docker and Docker Compose, follow these 
 
     ```bash
     docker compose up --build
+    ```
 
