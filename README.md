@@ -29,7 +29,7 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
   <br />
 </div>
 
-<br>
+---
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -40,7 +40,7 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
 - Prometheus
 - Grafana
 
-<br>
+---
 
 ## <a name="docker">🐳 Docker</a>
 
