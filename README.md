@@ -167,10 +167,10 @@ To run Prometheus in the background, create a systemd service for it by followin
 
 3. **Reload Systemd and Start the Service**
 
-After creating the service file, run the following commands to reload systemd and start Prometheus:
+    After creating the service file, run the following commands to reload systemd and start Prometheus:
 
-```bash
-sudo systemctl daemon-reload
-sudo systemctl start prometheus.service
-sudo systemctl enable prometheus.service
-```
+    ```bash
+    sudo systemctl daemon-reload
+    sudo systemctl start prometheus.service
+    sudo systemctl enable prometheus.service
+    ```
