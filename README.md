@@ -32,6 +32,7 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
   <br />
 </div>
 
+<br>
 
 ---
 
@@ -44,7 +45,9 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
 - Prometheus
 - Grafana
 
+<br>
 
+---
 
 ## <a name="docker">🐳 Docker</a>
 
@@ -83,6 +86,8 @@ To set up and run the application using Docker and Docker Compose, follow these 
     ```
 
 <br>
+
+---
 
 ## <a name="nginx">🌐 Nginx</a>
 
@@ -132,6 +137,8 @@ To set up NGINX as the proxy server for the application, follow these instructio
     ```
 
 <br>
+
+---
 
 ## <a name="prometheus">📈 Prometehus</a>
 
@@ -254,6 +261,8 @@ Prometheus will now start as a background service and will automatically launch 
 Once an alerting rule is triggered, you will receive a notification in your Gmail.
 
 <br>
+
+---
 
 ## <a name="grafana">📊 Grafana</a>
 
