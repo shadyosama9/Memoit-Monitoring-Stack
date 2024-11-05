@@ -33,6 +33,7 @@ This project sets up a comprehensive monitoring stack for the [Memoit web applic
 </div>
 
 
+---
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
